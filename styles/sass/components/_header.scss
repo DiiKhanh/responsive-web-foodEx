@@ -1,0 +1,105 @@
+.header {
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  @include pc {
+    padding: 24px 18%;
+  }
+  &.sticky {
+    background: #fff;
+    padding: 8px 3%;
+    box-shadow: 0px 0px 1px #13084982;
+    @include pc {
+      padding: 14px 18%;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 150px;
+      height: auto;
+    }
+  }
+
+  &__navbar {
+    position: absolute;
+    top: -600px;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    transition: $smooth;
+
+    @include pc {
+      position: initial;
+      top: initial;
+      left: initial;
+      width: initial;
+      height: initial;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &.show {
+      top: 100%;
+      border-top: 1px solid $other-color;
+      background: $bg-color;
+      @include pc {
+        border-top: none;
+      }
+    }
+
+    li {
+      a {
+        display: inline-block;
+        text-transform: capitalize;
+        color: $text-color;
+        font-weight: 700;
+        margin: 15px 0;
+        padding: 10px 15px;
+        font-size: 1.2rem;
+        transition: $smooth;
+        @include pc {
+          margin: 0 10px;
+        }
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+  &__cart {
+    i {
+      display: inline-block;
+      font-size: 40px;
+    }
+  }
+
+  &__btn {
+    display: none;
+    @include pc {
+      display: initial;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+#header__menu {
+  cursor: pointer;
+  font-size: 40px;
+  transition: $smooth;
+  z-index: 1001;
+  @include pc {
+    display: none;
+  }
+}

@@ -1,0 +1,60 @@
+.about {
+  background: url(../../img/feature.svg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  @include pc {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: initial;
+  }
+
+  &__content {
+    @include pc {
+      order: 2;
+    }
+    h3 {
+      text-transform: capitalize;
+      color: $second-color;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    h2 {
+      margin: 20px 0;
+      text-transform: capitalize;
+      font-size: $h2-font-m;
+      font-weight: 700;
+      line-height: 1.1;
+      @include pc {
+        font-size: $h2-font;
+      }
+    }
+    p {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: $p-font;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: $other-color;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+
+  &__img {
+    @include pc {
+      order: 1;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

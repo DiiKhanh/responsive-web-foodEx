@@ -1,0 +1,60 @@
+.home {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  @include pc {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: initial;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &__content {
+    h3 {
+      color: $second-color;
+      text-transform: capitalize;
+      font-size: 2rem;
+      font-weight: 500;
+      @include pc {
+        font-size: 2.4rem;
+      }
+    }
+    h1 {
+      font-size: $big-font-m;
+      text-transform: capitalize;
+      margin: 20px 0;
+      font-weight: 700;
+      @include pc {
+        font-size: $big-font;
+      }
+    }
+    p {
+      margin-bottom: 30px;
+      font-size: $p-font;
+      color: $other-color;
+      font-weight: 500;
+      line-height: 1.6;
+      font-family: "Open Sans", sans-serif;
+    }
+  }
+
+  &__btn {
+    font-size: 1.2rem;
+  }
+
+  &__img {
+    img {
+      width: 400px;
+      max-width: 100%;
+      height: auto;
+      @include pc {
+        width: 100%;
+      }
+    }
+  }
+}

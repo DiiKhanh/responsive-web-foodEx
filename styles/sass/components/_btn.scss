@@ -1,0 +1,21 @@
+.btn {
+  display: inline-block;
+  padding: 0.8em 2em;
+  border-radius: 100px;
+  text-transform: capitalize;
+  transition: $smooth;
+  color: $bg-color;
+  font-weight: bold;
+  &--green {
+    background: $main-color;
+  }
+
+  &--blue-dark {
+    background: $text-color;
+  }
+
+  &:hover {
+    transform: scale(1.02) translateY(-5px);
+    color: $second-color;
+  }
+}

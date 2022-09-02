@@ -1,0 +1,24 @@
+.center {
+  &__text {
+    text-transform: capitalize;
+    text-align: center;
+
+    h3 {
+      color: $second-color;
+      font-size: 1.8rem;
+      font-weight: 500;
+      @include pc {
+        font-size: 2.2rem;
+      }
+    }
+
+    h2 {
+      font-size: $h2-font-m;
+      margin: 20px 0;
+      line-height: 1.6;
+      @include pc {
+        font-size: $h2-font;
+      }
+    }
+  }
+}

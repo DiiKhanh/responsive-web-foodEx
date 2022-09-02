@@ -1,0 +1,91 @@
+.letter {
+  padding: 30px 40px;
+  box-shadow: 0px 5px 40px rgb(19 8 73 / 13%);
+  border-radius: 20px;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include pc {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__img {
+    margin-bottom: 40px;
+    @include pc {
+      margin: 0;
+      margin-right: 20px;
+    }
+  }
+
+  .center__text {
+    @include pc {
+      text-align: inherit;
+    }
+    h2 {
+      margin: 10px 0;
+    }
+    p {
+      color: $other-color;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+      font-weight: 400;
+      @include pc {
+        line-height: 1.6;
+      }
+    }
+  }
+
+  &__form {
+    form {
+      position: relative;
+      width: 350px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      @include pc {
+        flex-direction: row;
+      }
+      input:first-child {
+        display: inline-block;
+        width: 100%;
+        padding: 16px 80px 16px 10px;
+        border: 2px solid $main-color;
+        border-radius: 30px;
+        outline: none;
+        @include pc {
+          padding: 18px 130px 18px 15px;
+        }
+      }
+
+      input:last-child {
+        padding: 17px 30px;
+        outline: none;
+        background: $main-color;
+        color: $bg-color;
+        font-size: 17px;
+        font-weight: bold;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: $smooth;
+        &:hover {
+          transform: scale(1.05) translateY(-5px);
+          color: $second-color;
+        }
+        @include pc {
+          position: absolute;
+          display: inline-block;
+          background: $main-color;
+          color: #fff;
+          top: 1px;
+          right: 1px;
+        }
+      }
+    }
+  }
+}

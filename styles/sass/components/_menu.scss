@@ -1,0 +1,60 @@
+.menu {
+  &__box {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    gap: 4rem;
+    cursor: pointer;
+  }
+
+  &__item {
+    background: $bg-color;
+    padding: 15px 50px;
+    box-shadow: 0px 5px 40px rgb(19 8 73 / 13%);
+    border-radius: 20px;
+    transition: $smooth;
+
+    &:hover {
+      transform: scale(1.02) translateY(-10px);
+      border: 1px solid $second-color;
+    }
+    img {
+      height: auto;
+    }
+
+    h4 {
+      font-size: 2rem;
+      margin: 20px 0;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: $other-color;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.4;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    span {
+      color: $second-color;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    margin-top: 40px;
+    @media pc {
+      margin-top: 60px;
+    }
+  }
+
+  .btn {
+    @include pc {
+      font-size: 1.2rem;
+    }
+  }
+}
